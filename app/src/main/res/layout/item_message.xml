@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true"
+    card_view:cardCornerRAdius="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding = "5dp">
+        <TextView
+            android:id="@+id/textNameSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center|left|center_vertical"
+            android:text=""
+            android:layout_marginStart="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center_vertical|end"
+            android:text=""
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="12sp"
+        android:layout_marginStart="5dp"
+        android:padding="5dp" />
+</androidx.cardview.widget.CardView>

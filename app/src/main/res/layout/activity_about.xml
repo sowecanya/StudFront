@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/buttonBackSettings"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:background="#00FFFFFF"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_back" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="О приложении"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold|normal" />
+            </RelativeLayout>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding = "5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|left|center_vertical"
+                    android:text="SF: StudFront - приложение для учета военнообязанных студентов"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n\nНаше приложение предоставляет удобное взаимодействие с военкоматом и содержит полезные данные о воинской обязанности студента. Вы можете легко получить доступ к своим персональным данным, включая статус годности, дату призыва и другую важную информацию, хранящуюся в нашей системе. Это позволяет вам быть в курсе своего воинского положения и своевременно выполнять требования военкомата.
+
+Кроме того, мы обеспечиваем быстрый доступ к свежим новостям, связанным с военно-служебными вопросами. Вы будете в курсе последних изменений в законодательстве и политике, касающейся военной службы. Наша команда регулярно обновляет информацию, чтобы вы всегда имели актуальные данные под рукой.
+
+В приложении также представлены памятки и руководства, помогающие вам эффективно взаимодействовать с военкоматом. Вы найдете информацию о правилах поведения при посещении военкомата, процедурах получения документов, а также различных обязанностях и правах военнообязанных студентов. Это позволит вам чувствовать себя уверенно и грамотно выполнять требования военной службы.
+
+Мы стремимся сделать ваш опыт службы более удобным и успешным, предоставляя вам все необходимые инструменты и информацию в одном месте. Мы гордимся тем, что наше приложение помогает студентам справиться с военно-служебными вопросами и эффективно взаимодействовать с военкоматом."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:padding="5dp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

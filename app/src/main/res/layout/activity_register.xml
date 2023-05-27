@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/buttonBackRegister"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:background="#00FFFFFF"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Регистрация"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold|normal" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_email"
+                        android:text="Почта"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="___@mail.ru"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_password"
+                        android:text="Пароль"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="Надежный пароль"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                card_view:cardCornerRAdius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/label_status"
+                                android:text="Статус"
+                                android:textSize="16sp"
+                                android:layout_margin="5dp"
+                                android:textStyle="bold|normal"
+                                android:textColor="@color/bg"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="Военнообязанный | В запасе"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_name"
+                            android:text="Фамилия Имя"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="Иванов Иван"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_university"
+                            android:text="Место обучения"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditUniversity"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="Аббревиатура Университета"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="40dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_faculty"
+                            android:text="Факультет"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditFaculty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="Аббревиатура Факультета"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="80dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_group"
+                            android:text="Группа"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="Краткое название группы"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="80dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_course"
+                            android:text="Курс обучения"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditCourse"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="1-7"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="80dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_birthday"
+                            android:text="Дата рождения"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditBirthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="01.01.2000"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="80dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:cardCornerRadius="15dp"
+                app:cardUseCompatPadding="true"
+                card_view:cardCornerRAdius="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/label_last_come"
+                                android:text="Дата последней явки"
+                                android:textSize="16sp"
+                                android:layout_margin="5dp"
+                                android:textStyle="bold|normal"
+                                android:textColor="@color/bg"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditLastCome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="01.01.2018"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_next_come"
+                            android:text="Дата следующей явки"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditNextCome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="01.07.2018"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_category"
+                            android:text="Категория годности"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="А-Г"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="40dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_proffession"
+                            android:text="Военная профессия"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditProffession"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="при наличии"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginRight="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="80dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_otsrochka"
+                            android:text="Статус отсрочки"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditOtsrochka"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="Дата окончания отсрочки"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#79D6D1D1"
+                        android:paddingTop="80dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/label_date_start"
+                            android:text="Дата постановки на учет"
+                            android:textSize="16sp"
+                            android:layout_margin="5dp"
+                            android:textStyle="bold|normal"
+                            android:textColor="@color/bg"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/EditDateStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:gravity="center_vertical|end"
+                            android:hint="1-7"
+                            android:textColor="@color/bg"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_address_fact"
+                        android:text="Адрес проживания"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditAddressFact"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="г. ___, ул. ___ "
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_address"
+                        android:text="Адрес прописки"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="г. ___, ул. ___ "
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_year"
+                        android:text="Год окончания ВУЗа"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="А-Г"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <Button
+                android:id="@+id/buttonRegister"
+                style="@style/NotCapsButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Зарегистрироваться"
+                android:textColor="@color/bg"
+                android:textSize="18sp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

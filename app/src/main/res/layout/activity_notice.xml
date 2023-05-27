@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/buttonBackSettings"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:background="#00FFFFFF"
+                android:padding="5dp"
+                android:src="@drawable/ic_back" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Памятки для военнообязанных студентов"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|normal" />
+        </RelativeLayout>
+    </LinearLayout>
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRAdius="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|left|center_vertical"
+                android:text="Как вести себя в военкомате?"
+                android:layout_marginStart="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Будьте вежливы и уважительны к военкоматским работникам.\nВедите себя так, как вы бы хотели, чтобы с вами обращались.\nСледуйте инструкциям и указаниям военкоматского персонала. Обратитесь к ним, если у вас возникнут вопросы или потребуется помощь.
+            \nПредоставляйте всю необходимую информацию о себе точно и своевременно. Это включает заполнение анкет, предоставление медицинских справок и других документов."
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:padding="5dp" />
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRAdius="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|left|center_vertical"
+                android:text="Разновидности категорий годности:"
+                android:layout_marginStart="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='"А" - годен к военной службе без ограничений. Это означает, что у вас нет медицинских противопоказаний для прохождения службы.
+\n"Б" - годен с некоторыми ограничениями. Вам могут быть назначены определенные виды военной службы, которые соответствуют вашему состоянию здоровья.
+\n"В" - временно негоден с возможностью повторного осмотра и пересмотра категории. Вам могут быть назначены дополнительные обследования и процедуры для уточнения вашего состояния здоровья.
+\n"Г" - временно отсрочен от призыва по медицинским причинам. Вам может быть предоставлена отсрочка от призыва на определенный период времени.
+\n"Д" - негоден к военной службе по постоянным медицинским причинам. Вам не будет требоваться проходить службу из-за вашего состояния здоровья.'
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:padding="5dp" />
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRAdius="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center|left|center_vertical"
+                android:text="Правила поведения на военных сборах:"
+                android:layout_marginStart="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Следуйте указаниям командиров и инструкторов. Они являются авторитетными лицами на сборах, поэтому важно выполнять их указания и поручения.
+\nБудьте ответственными и выполняйте поручения в срок. Служба требует дисциплины и своевременного выполнения задач.
+\nСоблюдайте воинскую дисциплину и подчиняйтесь режиму. Это включает соблюдение правил поведения, распорядка дня, участие в тренировках и выполнение правил безопасности."
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:padding="5dp" />
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding = "5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|left|center_vertical"
+                    android:text="Основные этапы призыва и прохождения военной службы:"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\nПредварительная медицинская комиссия. Вам может потребоваться пройти осмотр и предоставить медицинские документы для определения вашей годности.
+\nПризывной пункт: предоставление документов и заполнение анкет. Вам понадобится предоставить свои личные данные и документы, подтверждающие вашу личность.
+\nПризыв в ряды Вооруженных Сил. Если вы годны к военной службе, вам может быть назначена дата призыва, когда вы официально станете военнослужащим.
+\nВоенная служба: прохождение служебной подготовки и исполнение служебных обязанностей. Вы будете проходить обучение, тренировки и выполнять поручения, соответствующие вашей должности и специализации."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:padding="5dp" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding = "5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center|left|center_vertical"
+                    android:text="Общие советы и рекомендации:"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Следите за своим здоровьем и поддерживайте физическую форму. Это поможет вам успешно проходить медицинские осмотры и служить без проблем.
+\nИзучайте законодательство, связанное с военной службой и правами военнообязанных. Хорошее знание военного законодательства поможет вам быть информированным о своих правах и обязанностях.
+\nОбращайтесь за консультацией к опытным военнослужащим или военным юристам. Если у вас возникают вопросы или проблемы, обратитесь за помощью к опытным специалистам, которые смогут вам дать нужную информацию и рекомендации.
+\nУчтите, что эти памятки являются общими рекомендациями, и реальные правила и процедуры могут отличаться в зависимости от страны и местных условий. Передействиями по поводу вашей службы лучше проконсультироваться с местными органами и официальными источниками информации."
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:padding="5dp" />
+        </androidx.cardview.widget.CardView>
+</LinearLayout>
+</ScrollView>

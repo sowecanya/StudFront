@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957493985127",
+    "project_id": "usptumilitaryapp",
+    "storage_bucket": "usptumilitaryapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957493985127:android:5e324fc01ddc2fc4e9b9c2",
+        "android_client_info": {
+          "package_name": "com.example.military_service"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957493985127-ec5jes6b5nt9r6k5vsoo5n08jl6forn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcYDYmn-UPfNJizns8yYmAApJjnJ5GcgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957493985127-ec5jes6b5nt9r6k5vsoo5n08jl6forn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Military_service" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="NotCapsButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

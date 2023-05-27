@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "176695712213",
+    "firebase_url": "https://militaryservice-b88aa-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "militaryservice-b88aa",
+    "storage_bucket": "militaryservice-b88aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176695712213:android:d034046d28aba05def855c",
+        "android_client_info": {
+          "package_name": "com.example.military_service"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176695712213-bshuhdjcculfgl6jbigjhvn29cu0oi9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyJto6wwwUWOC1FStJLeYEBDSpN-103ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176695712213-bshuhdjcculfgl6jbigjhvn29cu0oi9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
