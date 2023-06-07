@@ -9,14 +9,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 
-class StudentsList : AppCompatActivity(), StudentsAdapter.OnMessageClickListener {
+class StudentsListMilitary : AppCompatActivity(), StudentsAdapterMilitarys.OnMessageClickListener {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: StudentsAdapter
+    private lateinit var adapter: StudentsAdapterMilitarys
     private lateinit var db: FirebaseFirestore
     private lateinit var editSearch: EditText
     private lateinit var buttonSearch: ImageButton
     private lateinit var buttonBackList: ImageButton
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,7 @@ class StudentsList : AppCompatActivity(), StudentsAdapter.OnMessageClickListener
 
         recyclerView = findViewById(R.id.recyclerViewStudents)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = StudentsAdapter(emptyList(), this)
+        adapter = StudentsAdapterMilitarys(emptyList(), this)
         recyclerView.adapter = adapter
 
         editSearch = findViewById(R.id.editSearch)
@@ -37,7 +38,7 @@ class StudentsList : AppCompatActivity(), StudentsAdapter.OnMessageClickListener
         }
 
         buttonBackList.setOnClickListener {
-            val intent = Intent(this, CabinetActivity::class.java)
+            val intent = Intent(this, MilitaryActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -79,10 +80,10 @@ class StudentsList : AppCompatActivity(), StudentsAdapter.OnMessageClickListener
                 val studentsList = mutableListOf<Student>()
                 for (document in querySnapshot.documents) {
                     val name = document.getString("name")
-                    val group = document.getString("group")
+                    val last_com = document.getString("last_com")
                     val university = document.getString("university")
-                    val course = document.getString("course")
-                    val info = "$university | Группа: $group | $course Курс"
+                    val next_com = document.getString("next_com")
+                    val info = "$university | Дата посл. явки: $last_com | Дата след. явки: $next_com"
                     val id = document.getString("uid").toString()
                     val student = Student(name ?: "", info, id)
                     studentsList.add(student)

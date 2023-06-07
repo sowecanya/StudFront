@@ -5,10 +5,14 @@
         <item name="android:textSize">14sp</item> <!-- Размер шрифта -->
         <item name="android:textStyle">bold</item> <!-- Стиль шрифта -->
     </style>
+    <style name="BoldButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="MedicalExamDateStyle" parent="DefaultDateStyle">
         <item name="android:textColor">#00FF00</item> <!-- Зеленый цвет текста даты -->
     </style>
+
 
     <style name="CallUpDateStyle" parent="DefaultDateStyle">
         <item name="android:textColor">#FF0000</item> <!-- Красный цвет текста даты -->

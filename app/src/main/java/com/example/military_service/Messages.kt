@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
 
 class Messages : AppCompatActivity() {
 
@@ -27,6 +28,7 @@ class Messages : AppCompatActivity() {
         buttonBackMessages.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         fetchMessages()
@@ -47,14 +49,15 @@ class Messages : AppCompatActivity() {
                         val messageText = document.getString("messageText") ?: ""
                         val senderUid = document.getString("senderUid") ?: ""
                         val recipientUid = document.getString("recipientUid") ?: ""
-                        val timestamp = document.getDate("timestamp")
+                        val timestamp = document.getString("formattedTimestamp") ?: ""
                         val message = Message(messageId, messageText, senderUid, recipientUid,
-                            timestamp!!
-                        )
+                            timestamp)
                         messages.add(message)
                     }
                 }
-                messagesAdapter.updateMessages(messages)
+                val inputFormat = SimpleDateFormat("dd.MM.yyyy HH:mm:ss")
+                val messagesSortedByTimestamp = messages.sortedByDescending { inputFormat.parse(it.timestamp) }
+                messagesAdapter.updateMessages(messagesSortedByTimestamp)
             }
             .addOnFailureListener { exception ->
                 // Обработка ошибки при получении сообщений из базы данных

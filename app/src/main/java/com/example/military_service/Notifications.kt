@@ -28,6 +28,7 @@ class Notifications : AppCompatActivity() {
         buttonBackMessages.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // Загрузите данные новостей

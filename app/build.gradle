@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.military_service"
-        minSdk 24
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -71,7 +71,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
     implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
     implementation 'androidx.core:core-ktx:1.10.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
+    implementation 'javax.xml.stream:stax-api:1.0-2'
+    implementation 'org.apache.poi:poi:4.1.2'
     implementation 'com.google.firebase:firebase-storage-ktx:20.2.0'
     implementation 'org.apache.poi:poi:4.1.2'
     implementation 'org.apache.poi:poi-ooxml:4.1.2'

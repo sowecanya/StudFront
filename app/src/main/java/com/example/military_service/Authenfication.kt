@@ -2,12 +2,16 @@ package com.example.military_service
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 
 class Authenfication : AppCompatActivity() {
@@ -38,12 +42,15 @@ class Authenfication : AppCompatActivity() {
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString()
 
+
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 // Аутентификация пользователя
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnSuccessListener {
                         // Успешная аутентификация
-                        getUserData(email, password)
+
+                        Log.d("Auth", email + password)
+                        getUserData(auth.currentUser?.uid ?: "Nothing")
                     }
                     .addOnFailureListener { exception ->
                         // Ошибка аутентификации
@@ -59,17 +66,12 @@ class Authenfication : AppCompatActivity() {
             finish()
         }
     }
-
-    private fun getUserData(email: String, password: String) {
-        val studentsCollection = db.collection("students")
-
-        studentsCollection
-            .get()
-            .addOnSuccessListener { querySnapshot ->
-                if (!querySnapshot.isEmpty) {
-                    val userDocument = querySnapshot.documents[0]
-                    val userData = userDocument.data
-
+    private fun getUserData(uid: String) {
+        val studentsCollection = db.collection("students").document(uid)
+        studentsCollection.get()
+            .addOnSuccessListener { documentSnapshot ->
+                if (documentSnapshot.exists()) {
+                    val userData = documentSnapshot.data
                     if (userData != null && userData.containsKey("role")) {
                         when (userData["role"] as String) {
                             "militarys" -> {

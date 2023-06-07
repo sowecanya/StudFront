@@ -17,4 +17,5 @@ class SendMessageActivity : AppCompatActivity() {
             .replace(R.id.fragmentContainer, fragment)
             .commit()
     }
+
 }

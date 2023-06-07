@@ -7,7 +7,7 @@ data class Message(
     val messageText: String = "",
     val senderUid: String = "",
     val recipientUid: String = "",
-    val timestamp: Date
+    val timestamp: String
 
 )
 

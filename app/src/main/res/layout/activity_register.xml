@@ -552,7 +552,7 @@
                             android:background="@color/white"
                             android:fontFamily="@font/montserrat_medium"
                             android:gravity="center_vertical|end"
-                            android:hint="1-7"
+                            android:hint="01.07.2018"
                             android:textColor="@color/bg"
                             android:textSize="16sp"
                             android:layout_marginEnd="5dp"
@@ -655,10 +655,209 @@
                         android:background="@color/white"
                         android:fontFamily="@font/montserrat_medium"
                         android:gravity="center_vertical|end"
-                        android:hint="А-Г"
+                        android:hint="2023"
                         android:textColor="@color/bg"
                         android:textSize="16sp"
                         android:layout_marginRight="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRAdius="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_medcommissionStatus"
+                        android:text="Статус медкомиссии"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditMedcomissionStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="Пройдена/Не пройдена"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/date_medcomission"
+                        android:text="Дата медкомиссии"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditMedcomissionDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="01.07.2018"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_height"
+                        android:text="Рост"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="Ваш рост"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1"
+                    android:paddingTop="40dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_weight"
+                        android:text="Вес"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="Ваш вес"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1"
+                    android:paddingTop="80dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_illnesses"
+                        android:text="Наличие непризывных диагнозов"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditIllnesses"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="Да/Нет"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="5dp"
+                        android:textStyle="bold|normal" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#79D6D1D1"
+                    android:paddingTop="80dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/labelBloodGroup"
+                        android:text="Группа крови"
+                        android:textSize="16sp"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold|normal"
+                        android:textColor="@color/bg"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/EditBloodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="center_vertical|end"
+                        android:hint="1-7"
+                        android:textColor="@color/bg"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="5dp"
                         android:textStyle="bold|normal" />
                 </LinearLayout>
             </LinearLayout>

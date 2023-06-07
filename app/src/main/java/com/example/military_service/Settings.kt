@@ -21,25 +21,30 @@ class Settings : AppCompatActivity() {
         buttonBackSettings.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         buttonNotice.setOnClickListener {
             val intent = Intent(this, NoticeActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         buttonCalendar.setOnClickListener {
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         buttonAbout.setOnClickListener {
             val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
+            finish()
         }
         buttonFeedback.setOnClickListener {
             val intent = Intent(this, Messages::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

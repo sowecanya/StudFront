@@ -3,68 +3,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:background="@drawable/background"
-    android:orientation="vertical"
+    android:paddingBottom="40dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/buttonBack"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:background="#00FFFFFF"
-                android:padding="5dp"
-                android:src="@drawable/ic_back" />
-
-            <ImageButton
-                android:id="@+id/buttonNotifications"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_alignParentEnd="true"
-                android:layout_margin="5dp"
-                android:background="#00FFFFFF"
-                android:padding="1dp"
-                android:src="@drawable/ic_notifications" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <include
-        layout="@layout/item_avatar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="40dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="280dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical">
-        <FrameLayout
-            android:id="@+id/place_holder"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
-    </LinearLayout>
+            android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include layout="@layout/item_panel" />
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/buttonBack"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:background="#00FFFFFF"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_back" />
+
+                    <ImageButton
+                        android:id="@+id/buttonNotifications"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="5dp"
+                        android:background="#00FFFFFF"
+                        android:padding="1dp"
+                        android:src="@drawable/ic_notifications" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="40dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="280dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="100dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/place_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <include layout="@layout/item_panel" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

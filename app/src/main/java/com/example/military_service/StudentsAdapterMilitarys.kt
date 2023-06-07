@@ -8,10 +8,10 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class StudentsAdapter(
+class StudentsAdapterMilitarys(
     private var students: List<Student>,
     private val messageClickListener: OnMessageClickListener
-) : RecyclerView.Adapter<StudentsAdapter.StudentViewHolder>() {
+) : RecyclerView.Adapter<StudentsAdapterMilitarys.StudentViewHolder>() {
 
     inner class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.textName)

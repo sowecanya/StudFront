@@ -22,7 +22,7 @@ class MessagesAdapter(private val currentUid: String) :
 
         fun bind(message: Message) {
             textMessage.text = message.messageText
-            textTime.text = formatDate(message.timestamp)
+            textTime.text = message.timestamp
 
             val senderUid = message.senderUid
 
@@ -38,11 +38,6 @@ class MessagesAdapter(private val currentUid: String) :
                     }
                 }
             }
-        }
-
-        private fun formatDate(timestamp: Date): String {
-            val dateFormat = SimpleDateFormat("dd.MM HH:mm", Locale.getDefault())
-            return dateFormat.format(timestamp)
         }
     }
 

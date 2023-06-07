@@ -14,27 +14,19 @@ class MilitaryActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 
-        // Проверка, вошел ли пользователь в систему
-        val currentUser = auth.currentUser
-        if (currentUser == null) {
-            // Если пользователь не вошел в систему, перенаправляем на экран авторизации
-            val intent = Intent(this, Authenfication::class.java)
-            startActivity(intent)
-            finish() // Закрываем MainActivity, чтобы пользователь не мог вернуться назад
-        } else {
-            setContentView(R.layout.activity_military)
-        }
-
+        setContentView(R.layout.activity_military)
         val buttonBack = findViewById<ImageButton>(R.id.buttonBack)
         val buttonStudents = findViewById<Button>(R.id.buttonStudents)
 
         buttonBack.setOnClickListener {
             val intent = Intent(this, Authenfication::class.java)
             startActivity(intent)
+            finish()
         }
         buttonStudents.setOnClickListener {
-            val intent = Intent(this, StudentsList::class.java)
+            val intent = Intent(this, StudentsListMilitary::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

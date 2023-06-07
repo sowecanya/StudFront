@@ -1,6 +1,7 @@
 package com.example.military_service
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -13,7 +14,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var userNameText: TextView
     private lateinit var userGroupText: TextView
@@ -21,38 +21,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
-
-        // Проверка, вошел ли пользователь в систему
-        val currentUser = auth.currentUser
-        if (currentUser == null) {
-            // Если пользователь не вошел в систему, перенаправляем на экран авторизации
-            val intent = Intent(this, Authenfication::class.java)
-            startActivity(intent)
-            finish() // Закрываем MainActivity, чтобы пользователь не мог вернуться назад
-        } else {
-            val userUid = currentUser.uid
-            val userRef = db.collection("students").document(userUid)
-            userRef.get()
-                .addOnSuccessListener { documentSnapshot ->
-                    if (documentSnapshot.exists()) {
-                        val userData = documentSnapshot.data
-                        if (userData != null) {
-                            val role = userData["role"] as? String
-                            handleUserRole(role)
-                        } else {
-                            Toast.makeText(this, "Данные пользователя не найдены", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                }
-                .addOnFailureListener { exception ->
-                    Toast.makeText(this, "Ошибка получения данных пользователя: ${exception.message}", Toast.LENGTH_SHORT).show()
-                }
-        }
-
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
         userNameText = findViewById(R.id.user_name_text)
         userGroupText = findViewById(R.id.user_group_text)
@@ -85,6 +56,9 @@ class MainActivity : AppCompatActivity() {
         val buttonAdditional = findViewById<Button>(R.id.buttonMore)
 
         buttonMain.setOnClickListener {
+            buttonMain.setTypeface(null, Typeface.BOLD)
+            buttonMilitary.setTypeface(null, Typeface.NORMAL)
+            buttonAdditional.setTypeface(null, Typeface.NORMAL)
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.place_holder, MainInfoFragment.newInstance())
@@ -92,6 +66,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonMilitary.setOnClickListener {
+            buttonMain.setTypeface(null, Typeface.NORMAL)
+            buttonMilitary.setTypeface(null, Typeface.BOLD)
+            buttonAdditional.setTypeface(null, Typeface.NORMAL)
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.place_holder, MilitaryInfoFragment.newInstance())
@@ -99,6 +76,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonAdditional.setOnClickListener {
+            buttonMain.setTypeface(null, Typeface.NORMAL)
+            buttonMilitary.setTypeface(null, Typeface.NORMAL)
+            buttonAdditional.setTypeface(null, Typeface.BOLD)
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.place_holder, AdditionalInfoFragment.newInstance())
@@ -113,21 +93,25 @@ class MainActivity : AppCompatActivity() {
         buttonBack.setOnClickListener {
             val intent = Intent(this@MainActivity, Authenfication::class.java)
             startActivity(intent)
+            finish()
         }
 
         buttonNotifications.setOnClickListener {
             val intent = Intent(this@MainActivity, Messages::class.java)
             startActivity(intent)
+            finish()
         }
 
         buttonSettings.setOnClickListener {
             val intent = Intent(this@MainActivity, Settings::class.java)
             startActivity(intent)
+            finish()
         }
 
         buttonMessages.setOnClickListener {
             val intent = Intent(this@MainActivity, Notifications::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
